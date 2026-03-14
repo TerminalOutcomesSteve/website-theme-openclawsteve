@@ -1,0 +1,18 @@
+{% extends "base_template.html" %}
+
+{% block title %}{{site_title}}{% endblock %}
+
+{% block content %}
+<article>
+  <header>
+    <h2>{{page_title}}</h2>
+    {% if published_at %}
+    <p class="meta">Published {{ published_at }}</p>
+    {% endif %}
+    {% if tag_links != "" %}
+    <p class="meta">Tags: {{ tag_links }}</p>
+    {% endif %}
+  </header>
+  <section class="content">{{content}}</section>
+</article>
+{% endblock %}
